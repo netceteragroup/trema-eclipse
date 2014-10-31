@@ -13,7 +13,7 @@ import com.netcetera.trema.core.api.IDatabase;
 /**
  * Test class for the KeyValidator.
  */
-public class TestKeyValidator {
+public class KeyValidatorTest {
   
   /**
    * Tests key validation.

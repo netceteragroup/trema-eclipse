@@ -1,7 +1,6 @@
 package com.netcetera.trema.eclipse.validators;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.netcetera.trema.core.Status;
@@ -14,7 +13,7 @@ import com.netcetera.trema.core.api.ITextNode;
 /**
  * Test class for the LanguageValidator.
  */
-public class TestLanguageValidator {
+public class LanguageValidatorTest {
   
   /**
    * Tests the LanguageValidator.
@@ -40,6 +39,7 @@ public class TestLanguageValidator {
   /**
    * Tests the LanguageValidator.
    */
+  @Test
   public void testWithTextNode() {
     ITextNode textNode = new XMLTextNode("key1", "context1");
     textNode.addValueNode(new XMLValueNode("de", Status.INITIAL, "value1"));
