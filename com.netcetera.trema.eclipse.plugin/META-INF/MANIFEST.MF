@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Netcetera Trema
 Bundle-SymbolicName: com.netcetera.trema.eclipse.plugin;singleton:=true
-Bundle-Version: 0.2.0
+Bundle-Version: 0.2.1.qualifier
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.0",
  org.eclipse.ui;bundle-version="3.6.0",
  org.eclipse.jface.text;bundle-version="3.6.0",
@@ -21,5 +21,5 @@ Bundle-ClassPath: .,lib/commons-collections-3.2.1.jar,
  lib/commons-csv-1.0.jar
 Bundle-Activator: com.netcetera.trema.eclipse.TremaPlugin
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-Vendor: Netcetera
