@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lifecycleMappingMetadata>
+  <pluginExecutions>
+    <pluginExecution>
+      <pluginExecutionFilter>
+        <groupId>com.netcetera.trema</groupId>
+        <artifactId>trema-maven-plugin</artifactId>
+        <versionRange>[1.1.7,)</versionRange>
+        <goals>
+          <goal>exportProperties</goal>
+          <goal>exportAndroid</goal>
+          <goal>exportJson</goal>
+        </goals>
+      </pluginExecutionFilter>
+      <action>
+        <configurator>
+          <id>com.netcetera.trema.eclipse.m2e.tremaProjectConfigurator</id>
+        </configurator>
+      </action>
+    </pluginExecution>    
+  </pluginExecutions>
+</lifecycleMappingMetadata>

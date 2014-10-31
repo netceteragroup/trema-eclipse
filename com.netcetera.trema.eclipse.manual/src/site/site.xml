@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Trema Eclipse Plugin">
+
+  <publishDate position="left" format="yyyy-MM-dd HH:mm" />
+  <version position="left" />
+
+  <poweredBy>
+    <logo name="Maven" href="http://maven.apache.org/" img="images/build-by-maven-white.png" />
+  </poweredBy>
+
+  <body>
+    <menu name="Overview">
+      <item name="Introduction" href="index.html"/>
+      <item name="The File Format" href="fileformat.html"/>
+      <item name="Usage" href="usage.html"/>
+      <item name="FAQ" href="faq.html"/>
+    </menu>
+  </body>
+  
+</project>

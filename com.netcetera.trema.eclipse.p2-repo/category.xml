@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="com.netcetera.trema.eclipse.feature" version="0.0.0">
+      <category name="trema"/>
+   </feature>
+   <category-def name="trema" label="Trema"/>
+</site>

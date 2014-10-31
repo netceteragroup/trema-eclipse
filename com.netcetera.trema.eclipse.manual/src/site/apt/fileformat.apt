@@ -1,0 +1,71 @@
+ ------
+ Trema database fileformat
+ ------
+ Thomas Zueblin
+ ------
+ 2012-01-03
+ ------
+  
+Trema database file format
+
+  Trema files are xml files that end with '.trm'. There is a schema file which can be found here: http://software.group.nca/trema/schema/trema-1.0.xsd
+
+  The following example shows the basic structure:
+  
++-------
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated on Tue Jan 13 18:15:42 CET 2009 -->
+<trema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" masterLang="de" 
+  xsi:noNamespaceSchemaLocation="http://software.group.nca/trema/schema/trema-1.0.xsd">
+  <text key="dialog.login.title">
+    <context>Title of the log in dialog</context>
+    <value lang="de" status="initial">Hallo, bitte einloggen</value>
+    <value lang="en" status="initial">Hi, please log in</value>
+  </text>
+  <text key="logout.message">
+    <context>Message displayed after log out button is pressed</context>
+    <value lang="de" status="initial">Auf Wiedersehen!</value>
+    <value lang="en" status="initial">Goodbye!</value>
+  </text>
+</trema>
++-------
+
+ Explanation:
+
+ * <<masterLang:>> Usually an application is first implemented in only one language, the master language. The text values are then used to derive the values for other languages. When the text resources are exported into an xls file for translation, the master language values are always included and serve as basis for the translation.
+
+ * <<text key:>> Each text is identified by a unique key. Values can be added for several languages (a value in the masterlanguage should always be present). the key is used as key in the java property files
+
+ * <<context:>> A description of the text resource. Offers the developer and also the translator additional information about the text, i.e. where and how it is used in the application.
+
+ * <<lang:>> Defines the language of a text value
+
+ * <<status:>> There are several states that can be associated with text values. They are used to track the state that a text resource is in (i.e. draft version vs. translated by a professional translator), to protect text resources from accidental overriding and to all partial export of text resources based on their state.    
+
+ []
+
+ Supported states are:
+
+ * <<initial:>> draft state, texts are intended to be overwritten by imports
+ 
+ * <<translated:>> texts can still be overwritten, depending on the state in the xls, explicit accepting might be necessary
+ 
+ * <<verified:>> texts cannot be overwritten in succeeding imports from xls without explicitly accepting the change
+ 
+ * <<special:>> texts cannot be overwritten by imports from xls  
+
+ []
+
+ A typical usecase is:
+
+ * newly added texts are in initial state
+ 
+ * all texts with state 'inital' are exported and given to a translator
+ 
+ * after re-importing the translated file the state of the values (automatically) changes to 'translated'
+ 
+ * after texts have been verified to be correct in the application (i.e. after the customer has signed of the app) the state can be set to verified, which protects the texts from being overwritten by succeeding imports.
+ 
+ * special is used for texts that are not intended for any translation (i.e import/export) 
+
+ []
