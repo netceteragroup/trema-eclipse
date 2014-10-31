@@ -32,12 +32,11 @@ Introduction
  
 [images/overview.png] Overview
  
- The Trema Eclipse Plugin is shipped as part of the standard Netcetera Eclipse, therefore no manual installation is necessary.
- 
 * Usage
 
   General instructions on how to use the Trema Eclipse Plugin can be found on the {{{./usage.html}Usage page}}.
   
-  Documentation about the Trema Maven Plugin is available on the {{{http://buildfs.group.nca/dav/projects/nca-236-0/current/trema-parent/trema-maven-plugin/}Trema Maven Plugin}} site.
+  Documentation about the Trema Maven Plugin is available on the {{{https://github.com/netceteragroup/trema-maven}Trema Maven Plugin}} site.
+
+  If you encounter any issues with Trema please don't hesitate to create a new issue in our {{{https://github.com/netceteragroup/trema-eclipse}Trema Eclipse Github Page}}.
   
-  In case you still have questions regarding the plugin's usage feel free to contact {{{mailto:trema@netcetera.ch}trema@netcetera.ch}}

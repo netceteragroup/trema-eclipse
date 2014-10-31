@@ -8,7 +8,7 @@
   
 Trema database file format
 
-  Trema files are xml files that end with '.trm'. There is a schema file which can be found here: http://software.group.nca/trema/schema/trema-1.0.xsd
+  Trema files are xml files that end with '.trm'. There is a schema file which can be found here: https://raw.githubusercontent.com/netceteragroup/trema-core/master/src/main/resources/trema-1.0.xsd
 
   The following example shows the basic structure:
   
@@ -16,7 +16,7 @@ Trema database file format
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- generated on Tue Jan 13 18:15:42 CET 2009 -->
 <trema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" masterLang="de" 
-  xsi:noNamespaceSchemaLocation="http://software.group.nca/trema/schema/trema-1.0.xsd">
+  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/netceteragroup/trema-core/master/src/main/resources/trema-1.0.xsd">
   <text key="dialog.login.title">
     <context>Title of the log in dialog</context>
     <value lang="de" status="initial">Hallo, bitte einloggen</value>
