@@ -190,7 +190,6 @@ TremaPlugin.getDefault().getImageDescriptor(
   }
   
   /** {@inheritDoc} */
-  @SuppressWarnings("hiding")
   public void init(IWorkbench workbench,  IStructuredSelection selection) {
     this.selection = selection;
   }

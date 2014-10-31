@@ -73,7 +73,7 @@ public final class WorkbenchActionBuilder {
    * Builds the actions and contributes them to the given window.
    * @param actionBarConfigurer the action bar configurer
    */
-  public void makeAndPopulateActions(@SuppressWarnings("hiding") IActionBarConfigurer actionBarConfigurer) {
+  public void makeAndPopulateActions(IActionBarConfigurer actionBarConfigurer) {
     makeActions(actionBarConfigurer);
     populateMenuBar(actionBarConfigurer);
     populateCoolBar(actionBarConfigurer);
@@ -209,7 +209,7 @@ public final class WorkbenchActionBuilder {
   /**
    * Creates actions (and contribution items) for the menu bar, toolbar and status line.
    */
-  private void makeActions(@SuppressWarnings("hiding") IActionBarConfigurer actionBarConfigurer) {
+  private void makeActions(IActionBarConfigurer actionBarConfigurer) {
     
     // the actions in jface do not have menu vs. enable, vs. disable vs. color
     // there are actions in here being passed the workbench - problem 
