@@ -23,8 +23,8 @@
       <artifactId>commons-collections</artifactId>
     </dependency>
     <dependency>
-      <groupId>commons-lang</groupId>
-      <artifactId>commons-lang</artifactId>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
     </dependency>
     <dependency>
       <groupId>log4j</groupId>
@@ -37,10 +37,6 @@
     <dependency>
       <groupId>org.jdom</groupId>
       <artifactId>jdom-contrib</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>ch.netcetera.nca-209-2</groupId>
-      <artifactId>core</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.poi</groupId>
