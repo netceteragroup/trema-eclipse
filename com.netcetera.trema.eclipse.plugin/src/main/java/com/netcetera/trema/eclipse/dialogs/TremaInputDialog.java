@@ -16,7 +16,7 @@ import org.eclipse.ui.PlatformUI;
 /**
  * An abstract dialog providing OK and Cancel buttons aswell as an
  * error message label with an error image. Though his is similar to an
- * {@linke org.eclipse.jface.dialogs.InputDialog}, this class offers a
+ * {@link org.eclipse.jface.dialogs.InputDialog}, this class offers a
  * more flexible error message label.
  */
 public abstract class TremaInputDialog extends Dialog {
