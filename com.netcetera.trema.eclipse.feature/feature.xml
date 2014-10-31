@@ -2,7 +2,7 @@
 <feature
       id="com.netcetera.trema.eclipse.feature"
       label="Trema Feature"
-      version="0.2.0"
+      version="0.2.0.qualifier"
       provider-name="Netcetera">
 
    <description>
