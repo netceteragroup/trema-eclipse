@@ -48,6 +48,40 @@
             name="Trema Editor Table Tree View"/>
    </extension>
    
+   <extension point="org.eclipse.ui.bindings">
+      <key
+            sequence="Ctrl+Alt+R"
+            contextId="com.netcetera.trema.eclipse.contexts.tremaContext" 
+            commandId="com.netcetera.trema.eclipse.commands.removeNode"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            />
+      <key
+            sequence="Ctrl+Alt+N"
+            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
+            commandId="com.netcetera.trema.eclipse.commands.addTextNode"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="Ctrl+Alt+V"
+            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
+            commandId="com.netcetera.trema.eclipse.commands.addValueNode"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="Ctrl+Alt+U"
+            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
+            commandId="com.netcetera.trema.eclipse.commands.moveUp"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="Ctrl+Alt+D"
+            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
+            commandId="com.netcetera.trema.eclipse.commands.moveDown"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="Ctrl+Alt+E"
+            commandId="com.netcetera.trema.eclipse.commands.editTextNode"
+            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+   
    <extension point="org.eclipse.ui.commands">
       <category
             id="com.netcetera.trema.eclipse.commands.tremaCategory"
@@ -77,76 +111,32 @@
             categoryId="com.netcetera.trema.eclipse.commands.tremaCategory"
             description="Edit Text"
             id="com.netcetera.trema.eclipse.commands.editTextNode"
-            name="Edit Text">
-      </command>
+            name="Edit Text"/>
       <command
             categoryId="com.netcetera.trema.eclipse.commands.tremaCategory"
             description="Remove Node"
             id="com.netcetera.trema.eclipse.commands.removeNode"
-            name="Remove Node">
-      </command>
+            name="Remove Node"/>
       <command
             categoryId="com.netcetera.trema.eclipse.commands.tremaCategory"
             description="Trema export"
             id="com.netcetera.trema.eclipse.commands.exportFile"
-            name="Export">
-      </command>
+            name="Export"/>
       <command
             categoryId="com.netcetera.trema.eclipse.commands.tremaCategory"
             description="Trema import"
             id="com.netcetera.trema.eclipse.commands.importFile"
-            name="Import">
-      </command>
+            name="Import"/>
       <command
             categoryId="com.netcetera.trema.eclipse.commands.tremaCategory"
             description="Expand Tree"
             id="com.netcetera.trema.eclipse.commands.expandTree"
-            name="Expand Tree">
-      </command>
+            name="Expand Tree"/>
       <command
             categoryId="com.netcetera.trema.eclipse.commands.tremaCategory"
             description="Collapse Tree"
             id="com.netcetera.trema.eclipse.commands.collapseTree"
-            name="Collapse Tree">
-      </command>
-      <keyBinding
-            commandId="com.netcetera.trema.eclipse.commands.removeNode"
-            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
-            keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration"
-            keySequence="Ctrl+Alt+R"
-            string="Ctrl+Alt+R">
-      </keyBinding>
-      <keyBinding
-            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
-            string="Ctrl+Alt+N"
-            commandId="com.netcetera.trema.eclipse.commands.addTextNode"
-            keySequence="Ctrl+Alt+N"
-            keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
-      <keyBinding
-            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
-            commandId="com.netcetera.trema.eclipse.commands.addValueNode"
-            scope="Ctrl+Alt+V"
-            keySequence="Ctrl+Alt+V"
-            keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
-      <keyBinding
-            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
-            string="Ctrl+Alt+U"
-            commandId="com.netcetera.trema.eclipse.commands.moveUp"
-            keySequence="Ctrl+Alt+U"
-            keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
-      <keyBinding
-            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
-            string="Ctrl+Alt+D"
-            commandId="com.netcetera.trema.eclipse.commands.moveDown"
-            keySequence="Ctrl+Alt+D"
-            keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
-      <keyBinding
-            commandId="com.netcetera.trema.eclipse.commands.editTextNode"
-            contextId="com.netcetera.trema.eclipse.contexts.tremaContext"
-            keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration"
-            keySequence="Ctrl+Alt+E"
-            string="Ctrl+Alt+E">
-      </keyBinding>
+            name="Collapse Tree"/>
    </extension>
    
    <extension point="org.eclipse.ui.newWizards">
