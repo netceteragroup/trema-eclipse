@@ -29,14 +29,12 @@ public class MonitoringTremaCSVPrinter extends TremaCSVPrinter {
     this.monitor = monitor;
   }
   
-  /** {@inheritDoc} */
   public void monitorBeginTask(int totalwork) {
     if (monitor != null) {
       monitor.beginTask("Exporting...", totalwork);
     }
   }
   
-  /** {@inheritDoc} */
   public void monitorWorked(int work) {
     if (monitor != null) {
       monitor.worked(work);
