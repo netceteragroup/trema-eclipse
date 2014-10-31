@@ -13,18 +13,4 @@
   <packaging>eclipse-repository</packaging>
   <name>Trema Eclipse P2 Repository</name>
   
-  <build>
-    <plugins>
-      <plugin>
-        <!-- Maven doesn't know that the tycho-packaging-plugin has run and produced a package
-        and somehow thinks that it's fine to clean the target directory before doing the install.
-        Let's tell it to not do that. -->
-        <artifactId>maven-clean-plugin</artifactId>
-        <configuration>
-        <skip>true</skip>
-      </configuration>
-      </plugin>
-    </plugins>
-  </build>
-  
 </project>
