@@ -100,7 +100,6 @@
     <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
     <maven-source-plugin.version>2.4</maven-source-plugin.version>
     <maven-surefire-plugin.version>2.17</maven-surefire-plugin.version>
-    <maven-plugin-plugin.version>3.3</maven-plugin-plugin.version>
     <maven-site-plugin.version>3.4</maven-site-plugin.version>
     <maven-scm-publish-plugin.version>1.1</maven-scm-publish-plugin.version>
     <maven-project-info-reports-plugin.version>2.7</maven-project-info-reports-plugin.version>
@@ -264,6 +263,16 @@
         <!--<repoToken>${coveralls.trema-core.token}</repoToken> -->
         <!--</configuration> -->
       </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>${maven-site-plugin.version}</version>
+        <configuration>
+          <!-- We are deploying site using scm-publish, not site-deploy... -->
+          <skipDeploy>true</skipDeploy>
+        </configuration>
+      </plugin>
 
     </plugins>
   </build>
@@ -317,18 +326,6 @@
           </plugin>
         </plugins>
       </build>
-    </profile>
-
-    <profile>
-      <id>java8</id>
-      <activation>
-        <jdk>1.8</jdk>
-      </activation>
-      <properties>
-        <!--Turn of the silly Java 8 Javadoc linter because it complains about unknown annotations when it encounters Mojo 
-          JavaDoc Tags such as '@phase'. -->
-        <additionalparam>-Xdoclint:none</additionalparam>
-      </properties>
     </profile>
   </profiles>
 </project>
