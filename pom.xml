@@ -232,112 +232,53 @@
           <goals>deploy</goals>
         </configuration>
       </plugin>
-      
-      <plugin>
-        <groupId>org.eluder.coveralls</groupId>
-        <artifactId>coveralls-maven-plugin</artifactId>
-        <version>${coveralls-maven-plugin.version}</version>
-        <!--The Coveralls API token is made available as 'repoToken' env variable by Travis CI (see .travis.yml for secure-->
-        <!--env). If it weren't you could define it here and reference some property from your settings.xml.-->
-        <!--<configuration>-->
-        <!--<repoToken>${coveralls.trema-core.token}</repoToken>-->
-        <!--</configuration>-->
-      </plugin>
-      
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>${jacoco-maven-plugin.version}</version>
-        <configuration>
-          <!--<excludes />-->
-        </configuration>
-        <executions>
-          <execution>
-            <id>prepare-agent</id>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-        <version>${maven-site-plugin.version}</version>
-        <configuration>
-          <!-- We are deploying site using scm-publish, not site-deploy... -->
-          <skipDeploy>true</skipDeploy>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-plugin-plugin</artifactId>
-        <version>${maven-plugin-plugin.version}</version>
-        <configuration>
-          <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
-        </configuration>
-        <executions>
-          <execution>
-            <id>mojo-descriptor</id>
-            <goals>
-              <goal>descriptor</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>generated-helpmojo</id>
-            <goals>
-              <goal>helpmojo</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <artifactId>maven-scm-publish-plugin</artifactId>
-        <version>${maven-scm-publish-plugin.version}</version>
-        <configuration>
-          <scmBranch>gh-pages</scmBranch>
-          <pubScmUrl>${project.scm.developerConnection}</pubScmUrl>
-          <content>${project.reporting.outputDirectory}</content>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>publish-scm</goal>
-            </goals>
-            <phase>site-deploy</phase>
-          </execution>
-        </executions>
-      </plugin>
 
     </plugins>
   </build>
-  
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>${maven-project-info-reports-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-plugin-plugin</artifactId>
-        <version>${maven-plugin-plugin.version}</version>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>report</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-    </plugins>
-  </reporting>
 
   <profiles>
+    <profile>
+      <id>coveralls</id>
+      <activation>
+        <file>
+          <!-- Run only in child projects. -->
+          <missing>README.md</missing>
+        </file>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.eluder.coveralls</groupId>
+            <artifactId>coveralls-maven-plugin</artifactId>
+            <version>${coveralls-maven-plugin.version}</version>
+            <!--The Coveralls API token is made available as 'repoToken' env variable by Travis CI (see .travis.yml for secure -->
+            <!--env). If it weren't you could define it here and reference some property from your settings.xml. -->
+            <!--<configuration> -->
+            <!--<repoToken>${coveralls.trema-core.token}</repoToken> -->
+            <!--</configuration> -->
+          </plugin>
+
+          <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>${jacoco-maven-plugin.version}</version>
+            <configuration>
+              <!--<excludes /> -->
+            </configuration>
+            <executions>
+              <execution>
+                <id>prepare-agent</id>
+                <goals>
+                  <goal>prepare-agent</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+
     <!-- all plugins below are usually only required for release builds -->
     <profile>
       <id>release</id>
