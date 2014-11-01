@@ -3,7 +3,7 @@ jdk:
 - oraclejdk7
 - openjdk7
 after_success:
-- mvn clean test jacoco:report coveralls:report
+- mvn clean test -pl :com.netcetera.trema.eclipse.plugin,:com.netcetera.trema.eclipse.m2e-connector jacoco:report coveralls:report -DfailIfNoTests=false
 env:
   secure: "Y6Di9ccbwF9c4vbpFx4wj62/wbLys6zoj+wzqxv2UFkvBMS0Ivcum5T42W/6O/vA/oOfxk4DpkxJ8gWWBBkn85wzHzV48pBEibsnaFoge3CkUCueToV/umWN/MUzBp6FT7NYhgxF+VvrGF3FgrOcZXugTIi8ZzFLRTwD0iWMN2Q="
    
