@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Netcetera Trema
+Bundle-SymbolicName: com.netcetera.trema.eclipse.plugin.test;singleton:=true
+Bundle-Version: 0.2.1.qualifier
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.0",
+ org.eclipse.ui;bundle-version="3.6.0",
+ org.eclipse.jface.text;bundle-version="3.6.0",
+ org.eclipse.compare;bundle-version="3.5.100",
+ org.eclipse.core.resources;bundle-version="3.6.0",
+ org.eclipse.ui.editors;bundle-version="3.6.0",
+ org.eclipse.ui.ide;bundle-version="3.6.0",
+ org.junit;bundle-version="4.11.0",
+ com.netcetera.trema.eclipse.plugin;bundle-version="0.2.1"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Vendor: Netcetera

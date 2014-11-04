@@ -107,6 +107,7 @@
 
   <modules>
     <module>com.netcetera.trema.eclipse.plugin</module>
+    <module>com.netcetera.trema.eclipse.plugin.test</module>
     <module>com.netcetera.trema.eclipse.m2e-connector</module>
     <module>com.netcetera.trema.eclipse.feature</module>
     <module>com.netcetera.trema.eclipse.p2-repo</module>
@@ -214,6 +215,16 @@
           <target>${jdk.version}</target>
         </configuration>
       </plugin>
+      
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-surefire-plugin</artifactId>
+        <version>${tycho.version}</version>
+        <configuration>
+          <useUIHarness>true</useUIHarness>
+          <providerHint>junit4</providerHint>
+        </configuration>
+      </plugin>
 
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
@@ -268,9 +279,9 @@
         <version>${coveralls-maven-plugin.version}</version>
         <!--The Coveralls API token is made available as 'repoToken' env variable by Travis CI (see .travis.yml for secure -->
         <!--env). If it weren't you could define it here and reference some property from your settings.xml. -->
-        <!--<configuration> -->
-        <!--<repoToken>${coveralls.trema-core.token}</repoToken> -->
-        <!--</configuration> -->
+        <configuration>
+          <repoToken>xQ2z4Bum6KvQXLlrO3VZbZgIcXPuUAdWP</repoToken>
+        </configuration>
       </plugin>
       
       <plugin>
