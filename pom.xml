@@ -94,7 +94,6 @@
     <jdom.version>1.1</jdom.version>
 
     <!-- Plugins -->
-    <coveralls-maven-plugin.version>3.0.1</coveralls-maven-plugin.version>
     <jacoco-maven-plugin.version>0.7.2.201409121644</jacoco-maven-plugin.version>
     <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
     <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
@@ -302,17 +301,6 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.eluder.coveralls</groupId>
-        <artifactId>coveralls-maven-plugin</artifactId>
-        <version>${coveralls-maven-plugin.version}</version>
-        <!--The Coveralls API token is made available as 'repoToken' env variable by Travis CI (see .travis.yml for secure -->
-        <!--env). If it weren't you could define it here and reference some property from your settings.xml. -->
-        <configuration>
-          <repoToken>xQ2z4Bum6KvQXLlrO3VZbZgIcXPuUAdWP</repoToken>
-        </configuration>
       </plugin>
 
       <plugin>
