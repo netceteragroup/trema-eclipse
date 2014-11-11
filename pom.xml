@@ -83,7 +83,7 @@
     <maven.required.version>3.0.0</maven.required.version>
 
     <!-- Dependencies -->
-    <trema-core.version>0.1.2</trema-core.version>
+    <trema-core.version>0.2.0-SNAPSHOT</trema-core.version>
     <commons-collections.version>3.2.1</commons-collections.version>
     <commons-lang3.version>3.3.2</commons-lang3.version>
     <junit.version>4.11</junit.version>

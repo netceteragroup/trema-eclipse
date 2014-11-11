@@ -31,10 +31,11 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.Text;
 
-import com.netcetera.trema.common.TremaUtil;
+import com.netcetera.trema.common.TremaCoreUtil;
 import com.netcetera.trema.core.Status;
 import com.netcetera.trema.core.api.IDatabase;
 import com.netcetera.trema.core.api.ITextNode;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaPlugin;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 import com.netcetera.trema.eclipse.dialogs.TremaInputDialog;
@@ -348,7 +349,7 @@ public class ExportWizardOptionsPage extends WizardPage {
     }
     
     // language list
-    Set<String> languageSet = TremaUtil.getLanguages(db.getTextNodes());
+    Set<String> languageSet = TremaCoreUtil.getLanguages(db.getTextNodes());
     String[] languages = languageSet.toArray(new String[languageSet.size()]);
     languageViewer.setInput(languages);
     
@@ -532,7 +533,7 @@ public class ExportWizardOptionsPage extends WizardPage {
    */
   private void updateStatus(String message) {
     // avoid flashing
-    if (!TremaUtil.equalsOrNull(getErrorMessage(), message)) {
+    if (!TremaEclipseUtil.equalsOrNull(getErrorMessage(), message)) {
       setErrorMessage(message);
     }
     setPageComplete(message == null);
@@ -581,7 +582,7 @@ public class ExportWizardOptionsPage extends WizardPage {
    * @return the languages to be exported.
    */
   public String[] getLanguages() {
-    return TremaUtil.toStringArray(languageViewer.getCheckedElements());
+    return TremaEclipseUtil.toStringArray(languageViewer.getCheckedElements());
   }
   
   /**

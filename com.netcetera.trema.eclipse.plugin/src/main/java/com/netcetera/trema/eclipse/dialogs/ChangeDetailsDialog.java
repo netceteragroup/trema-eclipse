@@ -19,9 +19,9 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.Status;
 import com.netcetera.trema.core.importing.Change;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaPlugin;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 import com.netcetera.trema.eclipse.wizards.ImportWizardChangesPage;
@@ -109,7 +109,7 @@ public class ChangeDetailsDialog extends ResizableDialog {
     
     // key and context texts
     keyText.setText(currentChange.getKey());
-    contextText.setText(TremaUtil.emptyStringIfNull(currentChange.getContext()));
+    contextText.setText(TremaEclipseUtil.emptyStringIfNull(currentChange.getContext()));
     changeText.setText(Change.getDescription(currentChange));
     
     // imported status and database status

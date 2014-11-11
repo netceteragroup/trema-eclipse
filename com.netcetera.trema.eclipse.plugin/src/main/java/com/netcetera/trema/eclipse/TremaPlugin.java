@@ -124,7 +124,7 @@ public class TremaPlugin extends AbstractUIPlugin {
   
   /**
    * Convenience method to log an error. Uses
-   * <code>TremaUtil.createErrorStatus(String)</code> to create an
+   * <code>TremaEclipseUtil.createErrorStatus(String)</code> to create an
    * <code>IStatus</code>.
    * @param message the error message to be logged
    */
@@ -134,7 +134,7 @@ public class TremaPlugin extends AbstractUIPlugin {
   
   /**
    * Convenience method to log an error. Uses
-   * <code>TremaUtil.createErrorStatus(Throwable)</code> to create an
+   * <code>TremaEclipseUtil.createErrorStatus(Throwable)</code> to create an
    * <code>IStatus</code>.
    * @param throwable the throwable to be logged
    */

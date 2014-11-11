@@ -24,7 +24,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 
-import com.netcetera.trema.common.TremaUtil;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaPlugin;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 import com.netcetera.trema.eclipse.dialogs.TremaInputDialog;
@@ -263,7 +263,7 @@ public class NewWizardOptionsPage extends WizardPage {
    */
   private void updateStatus(String message) {
     // avoid flashing
-    if (!TremaUtil.equalsOrNull(getErrorMessage(), message)) {
+    if (!TremaEclipseUtil.equalsOrNull(getErrorMessage(), message)) {
       setErrorMessage(message);
     }
     setPageComplete(message == null);

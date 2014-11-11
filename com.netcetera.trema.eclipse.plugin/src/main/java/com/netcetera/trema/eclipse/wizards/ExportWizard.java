@@ -25,7 +25,6 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.ListSelectionDialog;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.Status;
 import com.netcetera.trema.core.api.IDatabase;
 import com.netcetera.trema.core.api.IExportFilter;
@@ -37,6 +36,7 @@ import com.netcetera.trema.core.exporting.FileOutputStreamFactory;
 import com.netcetera.trema.core.exporting.MessageFormatEscapingFilter;
 import com.netcetera.trema.core.exporting.PropertiesExporter;
 import com.netcetera.trema.core.exporting.XLSExporter;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaPlugin;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 import com.netcetera.trema.eclipse.exporting.MonitoringTremaCSVPrinter;
@@ -267,7 +267,7 @@ TremaPlugin.getDefault().getImageDescriptor(
     dialogSettings.put(ExportWizardOptionsPage.DS_KEY_LANGUAGES, languages);
     dialogSettings.put(ExportWizardOptionsPage.DS_KEY_STATUS, Status.getNames(status));
     dialogSettings.put(ExportWizardOptionsPage.DS_KEY_FOLDER_PATHS,
-        TremaUtil.rotate(dialogSettings.getArray(ExportWizardOptionsPage.DS_KEY_FOLDER_PATHS),
+        TremaEclipseUtil.rotate(dialogSettings.getArray(ExportWizardOptionsPage.DS_KEY_FOLDER_PATHS),
                                folderPath.toOSString(), 5));
     if (csvFileExport) {
       dialogSettings.put(ExportWizardOptionsPage.DS_KEY_EXPORTTYPE, ExportWizardOptionsPage.CSV);

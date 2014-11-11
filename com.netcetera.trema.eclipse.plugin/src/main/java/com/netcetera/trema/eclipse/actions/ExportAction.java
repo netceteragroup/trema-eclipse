@@ -7,9 +7,9 @@ import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IWorkbenchWindow;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.api.IDatabase;
 import com.netcetera.trema.core.api.ITextNode;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 import com.netcetera.trema.eclipse.editors.TremaEditor;
 import com.netcetera.trema.eclipse.wizards.ExportWizard;
@@ -53,7 +53,7 @@ public class ExportAction extends TremaEditorAction {
     IFile dbFile = ((IFileEditorInput) tremaEditor.getTextEditor().getEditorInput()).getFile();
     
     String initialFolderPath = dbFile.getParent().getLocation().toOSString();
-    String initialBaseName = TremaUtil.stripExtension(dbFile.getName());
+    String initialBaseName = TremaEclipseUtil.stripExtension(dbFile.getName());
     
     ExportWizard wizard =
       new ExportWizard(db, selectedTextNodes, initialFolderPath, initialBaseName);

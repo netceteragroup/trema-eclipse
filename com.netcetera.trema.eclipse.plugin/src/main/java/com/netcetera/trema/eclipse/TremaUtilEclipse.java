@@ -27,7 +27,6 @@ import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.WorkbenchEncoding;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.api.IDatabase;
 import com.netcetera.trema.core.api.ITextNode;
 import com.netcetera.trema.core.api.IValueNode;
@@ -268,7 +267,7 @@ public final class TremaUtilEclipse {
     if (validExtensions != null && validExtensions.length > 0) {
       int dotPosition = fileName.lastIndexOf('.');
       if (dotPosition == -1) {
-        return "File extension must be one of: " + TremaUtil.arrayToString(validExtensions, ", ");
+        return "File extension must be one of: " + TremaEclipseUtil.arrayToString(validExtensions, ", ");
       }
       
       String extension = fileName.substring(dotPosition + 1);
@@ -277,7 +276,7 @@ public final class TremaUtilEclipse {
         validExtension = extension.equalsIgnoreCase(validExtensions[i]);
       }
       if (!validExtension) {
-        return "File extension must be one of: " + TremaUtil.arrayToString(validExtensions, ", ");
+        return "File extension must be one of: " + TremaEclipseUtil.arrayToString(validExtensions, ", ");
       }
     }
     

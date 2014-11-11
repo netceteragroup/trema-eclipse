@@ -5,7 +5,7 @@ import java.util.Set;
 import org.eclipse.jface.dialogs.IInputValidator;
 import org.eclipse.jface.viewers.ICellEditorValidator;
 
-import com.netcetera.trema.common.TremaUtil;
+import com.netcetera.trema.common.TremaCoreUtil;
 import com.netcetera.trema.core.api.ITextNode;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 
@@ -41,7 +41,7 @@ public class LanguageValidator implements IInputValidator, ICellEditorValidator 
    * are invalid
    */
   public LanguageValidator(ITextNode[] textNodes) {
-    languages = TremaUtil.getLanguages(textNodes);
+    languages = TremaCoreUtil.getLanguages(textNodes);
   }
 
   /** {@inheritDoc} */

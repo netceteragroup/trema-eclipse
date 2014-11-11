@@ -27,7 +27,7 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.ContainerGenerator;
 import org.eclipse.ui.ide.IDE;
 
-import com.netcetera.trema.common.TremaUtil;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaPlugin;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 
@@ -175,7 +175,7 @@ TremaPlugin.getDefault().getImageDescriptor(
   private InputStream getInitialContents(String masterLanguage, String encoding, String schemaLocation)
   throws UnsupportedEncodingException {
     StringBuffer contents = new StringBuffer(1024);
-    String lineSeparator = TremaUtil.getDefaultLineSeparator();
+    String lineSeparator = TremaEclipseUtil.getDefaultLineSeparator();
     contents.append("<?xml version=\"1.0\" encoding=\"").append(encoding).append("\"?>");
     contents.append(lineSeparator);
     contents.append("<!-- generated on " + new Date() + " -->");

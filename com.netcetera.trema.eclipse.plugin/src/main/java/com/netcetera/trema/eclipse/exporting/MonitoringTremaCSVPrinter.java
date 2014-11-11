@@ -1,6 +1,7 @@
 package com.netcetera.trema.eclipse.exporting;
 
 import java.io.Writer;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 
 import com.netcetera.trema.core.exporting.TremaCSVPrinter;

@@ -69,12 +69,12 @@ import org.eclipse.ui.part.MultiPageEditorPart;
 import org.eclipse.ui.texteditor.IStatusField;
 import org.eclipse.ui.texteditor.MarkerUtilities;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.ParseException;
 import com.netcetera.trema.core.ParseWarning;
 import com.netcetera.trema.core.Status;
 import com.netcetera.trema.core.XMLDatabase;
 import com.netcetera.trema.core.api.IDatabase;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaPlugin;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 import com.netcetera.trema.eclipse.actions.AddTextNodeAction;
@@ -705,7 +705,7 @@ public class TremaEditor extends MultiPageEditorPart implements IGotoMarker {
       encoding = "UTF-8";
     }
 
-    String lineSeparator = TremaUtil.getDefaultLineSeparator(); // use the
+    String lineSeparator = TremaEclipseUtil.getDefaultLineSeparator(); // use the
                                                                 // default
                                                                 // platform line
                                                                 // separator

@@ -22,13 +22,13 @@ import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.ParseException;
 import com.netcetera.trema.core.api.IDatabase;
 import com.netcetera.trema.core.api.IImportSource;
 import com.netcetera.trema.core.importing.CSVFile;
 import com.netcetera.trema.core.importing.ChangesAnalyzer;
 import com.netcetera.trema.core.importing.XLSFile;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaPlugin;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 import com.netcetera.trema.eclipse.dialogs.TremaInputDialog;
@@ -205,7 +205,7 @@ public class ImportWizardFilePage extends WizardPage {
    */
   private void updateStatus(String message) {
     // avoid flashing
-    if (!TremaUtil.equalsOrNull(getErrorMessage(), message)) {
+    if (!TremaEclipseUtil.equalsOrNull(getErrorMessage(), message)) {
       setErrorMessage(message);
     }
     setPageComplete(message == null);

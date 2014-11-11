@@ -14,9 +14,9 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.Status;
 import com.netcetera.trema.core.api.IValueNode;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 
 
 
@@ -111,7 +111,7 @@ public class ValueNodeDialog extends TremaInputDialog {
    */
   private void initValue() {
     if (initialValueNode != null) {
-      setValueText(TremaUtil.emptyStringIfNull(initialValueNode.getValue()));
+      setValueText(TremaEclipseUtil.emptyStringIfNull(initialValueNode.getValue()));
     }
   }
   

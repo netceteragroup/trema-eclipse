@@ -40,11 +40,11 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.Status;
 import com.netcetera.trema.core.api.IDatabase;
 import com.netcetera.trema.core.api.IImportSource;
 import com.netcetera.trema.core.importing.Change;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 import com.netcetera.trema.eclipse.dialogs.ChangeDetailsDialog;
 import com.netcetera.trema.eclipse.importing.MonitoringChangesAnalyzer;
@@ -554,15 +554,15 @@ public class ImportWizardChangesPage extends WizardPage {
         
         switch (columnIndex) {
           case 0:
-            return TremaUtil.emptyStringIfNull(change.getKey());
+            return TremaEclipseUtil.emptyStringIfNull(change.getKey());
           case 1:
-            return TremaUtil.emptyStringIfNull(Change.getDescription(change));
+            return TremaEclipseUtil.emptyStringIfNull(Change.getDescription(change));
           case 2:
-            return TremaUtil.emptyStringIfNull(change.getAcceptMasterValue());
+            return TremaEclipseUtil.emptyStringIfNull(change.getAcceptMasterValue());
           case 3:
-            return TremaUtil.emptyStringIfNull(change.getAcceptValue());
+            return TremaEclipseUtil.emptyStringIfNull(change.getAcceptValue());
           case 4:
-            return TremaUtil.emptyStringIfNull("" + change.getAcceptStatus());
+            return TremaEclipseUtil.emptyStringIfNull("" + change.getAcceptStatus());
           default:
             return "";
         }
@@ -602,9 +602,9 @@ public class ImportWizardChangesPage extends WizardPage {
       if (element instanceof Change) {
         Change change = (Change) element;
         if (property == PROP_MASTER_VALUE_COLUMN) {
-          return TremaUtil.emptyStringIfNull(change.getAcceptMasterValue());
+          return TremaEclipseUtil.emptyStringIfNull(change.getAcceptMasterValue());
         } else if (property == PROP_VALUE_COLUMN) {
-          return TremaUtil.emptyStringIfNull(change.getAcceptValue());
+          return TremaEclipseUtil.emptyStringIfNull(change.getAcceptValue());
         } else if (property == PROP_STATUS_COLUMN) {
           Status status = change.getAcceptStatus();
           if (status == null) {

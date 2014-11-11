@@ -7,10 +7,10 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Display;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.api.IDatabase;
 import com.netcetera.trema.core.api.ITextNode;
 import com.netcetera.trema.core.api.IValueNode;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaUtilEclipse;
 
 
@@ -37,7 +37,7 @@ public class TremaLabelProvider extends ColumnLabelProvider{
         case 0:
           return "Trema Database";
         case 1:
-          return TremaUtil.emptyStringIfNull(((IDatabase) element).getMasterLanguage());
+          return TremaEclipseUtil.emptyStringIfNull(((IDatabase) element).getMasterLanguage());
         default:
           return "";
       }
@@ -45,9 +45,9 @@ public class TremaLabelProvider extends ColumnLabelProvider{
       ITextNode textNode = (ITextNode) element;
       switch (columnIndex) {
         case 0:
-          return TremaUtil.emptyStringIfNull(textNode.getKey());
+          return TremaEclipseUtil.emptyStringIfNull(textNode.getKey());
         case 1:
-          return TremaUtil.emptyStringIfNull(textNode.getContext());
+          return TremaEclipseUtil.emptyStringIfNull(textNode.getContext());
         default:
           return "";
       }
@@ -55,11 +55,11 @@ public class TremaLabelProvider extends ColumnLabelProvider{
       IValueNode valueNode = (IValueNode) element;
       switch (columnIndex) {
         case 0:
-          return TremaUtil.emptyStringIfNull(valueNode.getLanguage());
+          return TremaEclipseUtil.emptyStringIfNull(valueNode.getLanguage());
         case 1:
-          return TremaUtilEclipse.makeLineEndingsVisible(TremaUtil.emptyStringIfNull(valueNode.getValue()), true);
+          return TremaUtilEclipse.makeLineEndingsVisible(TremaEclipseUtil.emptyStringIfNull(valueNode.getValue()), true);
         case 2:
-          return TremaUtil.emptyStringIfNull(valueNode.getStatus().getName());
+          return TremaEclipseUtil.emptyStringIfNull(valueNode.getStatus().getName());
         default:
           // fall back
       }

@@ -12,10 +12,10 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.wizard.Wizard;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.api.IDatabase;
 import com.netcetera.trema.core.importing.Change;
 import com.netcetera.trema.core.importing.ChangesAnalyzer;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaPlugin;
 import com.netcetera.trema.eclipse.dialogs.LogDialog;
 
@@ -96,7 +96,7 @@ public class ImportWizard extends Wizard {
     // store some dialog settings
     IDialogSettings dialogSettings = TremaPlugin.getDefault().getDialogSettings();
     dialogSettings.put(ImportWizardFilePage.DS_KEY_FILE_PATHS,
-        TremaUtil.rotate(dialogSettings.getArray(ImportWizardFilePage.DS_KEY_FILE_PATHS),
+        TremaEclipseUtil.rotate(dialogSettings.getArray(ImportWizardFilePage.DS_KEY_FILE_PATHS),
                                filePage.getFilePath(), 5));
     dialogSettings.put(ImportWizardFilePage.DS_KEY_ENCODING, filePage.getEncoding());
     dialogSettings.put(ImportWizardFilePage.DS_KEY_SEPARATOR, String.valueOf(filePage.getSeparator()));
@@ -149,13 +149,13 @@ public class ImportWizard extends Wizard {
     StringBuffer buffer = new StringBuffer();
     buffer.append(new Date()).append("\n").append("Import log for: ").append(filePage.getFilePath()).append("\n\n");
     buffer.append("Accepted conflicting changes (").append(appliedConflicting.size()).append("):\n");
-    buffer.append(TremaUtil.listToString(appliedConflicting, "\n")).append("\n\n");
+    buffer.append(TremaEclipseUtil.listToString(appliedConflicting, "\n")).append("\n\n");
     buffer.append("Denied conflicting changes (").append(deniedConflicting.size()).append("):\n");
-    buffer.append(TremaUtil.listToString(deniedConflicting, "\n")).append("\n\n");
+    buffer.append(TremaEclipseUtil.listToString(deniedConflicting, "\n")).append("\n\n");
     buffer.append("Accepted non-conflicting changes (").append(appliedNonConflicting.size()).append("):\n");
-    buffer.append(TremaUtil.listToString(appliedNonConflicting, "\n")).append("\n\n");
+    buffer.append(TremaEclipseUtil.listToString(appliedNonConflicting, "\n")).append("\n\n");
     buffer.append("Denied non-conflicting changes (").append(deniedNonConflicting.size()).append("):\n");
-    buffer.append(TremaUtil.listToString(deniedNonConflicting, "\n")).append("\n\n");
+    buffer.append(TremaEclipseUtil.listToString(deniedNonConflicting, "\n")).append("\n\n");
     
     importLog = buffer.toString();   
   }

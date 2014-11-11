@@ -25,8 +25,8 @@ import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
-import com.netcetera.trema.common.TremaUtil;
 import com.netcetera.trema.core.api.ITextNode;
+import com.netcetera.trema.eclipse.TremaEclipseUtil;
 import com.netcetera.trema.eclipse.TremaPlugin;
 import com.netcetera.trema.eclipse.validators.LanguageValidator;
 
@@ -150,7 +150,7 @@ public class TextNodeDialog extends TremaInputDialog {
    */
   private void initKey() {
     if (initialTextNode != null) {
-      setKeyText(TremaUtil.emptyStringIfNull(initialTextNode.getKey()));
+      setKeyText(TremaEclipseUtil.emptyStringIfNull(initialTextNode.getKey()));
     }
   }
 
@@ -161,7 +161,7 @@ public class TextNodeDialog extends TremaInputDialog {
    */
   private void initContext() {
     if (initialTextNode != null) {
-      setContextText(TremaUtil.emptyStringIfNull(initialTextNode.getContext()));
+      setContextText(TremaEclipseUtil.emptyStringIfNull(initialTextNode.getContext()));
     }
   }
   
