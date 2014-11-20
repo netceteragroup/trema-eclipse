@@ -12,6 +12,17 @@
           <goal>exportJson</goal>
         </goals>
       </pluginExecutionFilter>
+      <pluginExecutionFilter>
+        <!-- Used for compatibility with previous version. -->
+        <groupId>ch.netcetera.nca-236-0</groupId>
+        <artifactId>trema-maven-plugin</artifactId>
+        <versionRange>[1.0.0,)</versionRange>
+        <goals>
+          <goal>exportProperties</goal>
+          <goal>exportAndroid</goal>
+          <goal>exportJson</goal>
+        </goals>
+      </pluginExecutionFilter>
       <action>
         <configurator>
           <id>com.netcetera.trema.eclipse.m2e.tremaProjectConfigurator</id>
