@@ -5,7 +5,7 @@
       <pluginExecutionFilter>
         <groupId>com.netcetera.trema</groupId>
         <artifactId>trema-maven-plugin</artifactId>
-        <versionRange>[1.1.7,)</versionRange>
+        <versionRange>[0.1.0,)</versionRange>
         <goals>
           <goal>exportProperties</goal>
           <goal>exportAndroid</goal>
