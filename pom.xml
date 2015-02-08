@@ -106,6 +106,10 @@
     <maven-site-plugin.version>3.4</maven-site-plugin.version>
     <maven-scm-publish-plugin.version>1.1</maven-scm-publish-plugin.version>
     <maven-project-info-reports-plugin.version>2.7</maven-project-info-reports-plugin.version>
+    
+    <!-- Required default to fix bug on Mac OS X -->
+    <!-- See: https://wiki.eclipse.org/Tycho/FAQ#How_do_I_add_OS-specific_flags.3F -->
+    <os-jvm-flags/>
   </properties>
 
   <modules>
@@ -256,6 +260,7 @@
         <artifactId>tycho-surefire-plugin</artifactId>
         <version>${tycho.version}</version>
         <configuration>
+          <argLine>${os-jvm-flags}</argLine>
           <useUIHarness>true</useUIHarness>
           <providerHint>junit4</providerHint>
         </configuration>
@@ -382,5 +387,19 @@
         </plugins>
       </build>
     </profile>
+    
+    <profile>
+      <!-- On Mac use XstartOnFirstThread otherwise you get the following error: -->
+      <!-- Display must be created on main thread due to Cocoa restrictions. -->
+      <id>macosx-jvm-flags</id>
+      <activation>
+        <os><family>mac</family></os>
+      </activation>
+      <properties>
+        <os-jvm-flags>-XstartOnFirstThread</os-jvm-flags>
+      </properties>
+    </profile>
+    
+    
   </profiles>
 </project>
