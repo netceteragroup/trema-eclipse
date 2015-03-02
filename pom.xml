@@ -4,7 +4,7 @@
 
   <groupId>com.netcetera.trema</groupId>
   <artifactId>trema-eclipse</artifactId>
-  <version>0.3.0</version>
+  <version>0.3.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Trema Eclipse</name>
   <description>Eclipse Plugin for Trema - Text resource management</description>
@@ -49,7 +49,7 @@
     <url>${project.url}</url>
     <connection>scm:git:git@github.com:netceteragroup/trema-eclipse.git</connection>
     <developerConnection>scm:git:git@github.com:netceteragroup/trema-eclipse.git</developerConnection>
-    <tag>trema-eclipse-0.3.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
