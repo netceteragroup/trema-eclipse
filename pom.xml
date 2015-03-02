@@ -76,7 +76,7 @@
 
     <!-- Repositories -->
     <eclipse.version>luna</eclipse.version>
-    <eclipse-repository-url>http://mirror.switch.ch/eclipse/releases/${eclipse.version}</eclipse-repository-url>
+    <eclipse-repository-url>http://download.eclipse.org/releases/${eclipse.version}</eclipse-repository-url>
     <orbit-repository-url>http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/</orbit-repository-url>
 
     <!-- Framework version -->
