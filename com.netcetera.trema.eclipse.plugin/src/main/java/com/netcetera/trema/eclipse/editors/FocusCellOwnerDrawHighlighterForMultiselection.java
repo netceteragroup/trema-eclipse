@@ -3,7 +3,8 @@ package com.netcetera.trema.eclipse.editors;
 
 import java.lang.reflect.Method;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.Assert;
 import org.eclipse.jface.viewers.ColumnViewer;
 import org.eclipse.jface.viewers.FocusCellHighlighter;
@@ -27,7 +28,7 @@ import org.eclipse.swt.widgets.Widget;
  */
 public class FocusCellOwnerDrawHighlighterForMultiselection extends FocusCellHighlighter {
     
-    private static final Logger LOGGER = Logger.getLogger(FocusCellOwnerDrawHighlighterForMultiselection.class);
+    private static final Logger LOGGER = LogManager.getLogger(FocusCellOwnerDrawHighlighterForMultiselection.class);
     
     /**
      * Create a new instance which can be passed to a {@link TreeViewerFocusCellManager}
