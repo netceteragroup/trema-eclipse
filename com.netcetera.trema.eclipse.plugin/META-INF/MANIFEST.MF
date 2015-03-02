@@ -19,7 +19,7 @@ Bundle-ClassPath: .,lib/commons-collections4-4.0.jar,
  lib/junit-4.11.jar,
  lib/log4j-api-2.2.jar,
  lib/log4j-core-2.2.jar,
- lib/trema-core-0.3.0-SNAPSHOT.jar,
+ lib/trema-core-0.3.0.jar,
  lib/poi-3.10-FINAL.jar,
  lib/commons-csv-1.0.jar,
  lib/xercesImpl-2.11.0.jar

@@ -84,7 +84,7 @@
     <maven.required.version>3.0.0</maven.required.version>
 
     <!-- Dependencies -->
-    <trema-core.version>0.3.0-SNAPSHOT</trema-core.version>
+    <trema-core.version>0.3.0</trema-core.version>
 
     <!-- All dependencies of trema-core must be declared in order to be available at runtime. -->
     <commons-collections.version>4.0</commons-collections.version>
