@@ -12,6 +12,13 @@
           <goal>exportJson</goal>
         </goals>
       </pluginExecutionFilter>
+      <action>
+        <configurator>
+          <id>com.netcetera.trema.eclipse.m2e.tremaProjectConfigurator</id>
+        </configurator>
+      </action>
+    </pluginExecution>    
+    <pluginExecution>
       <pluginExecutionFilter>
         <!-- Used for compatibility with previous version. -->
         <groupId>ch.netcetera.nca-236-0</groupId>
