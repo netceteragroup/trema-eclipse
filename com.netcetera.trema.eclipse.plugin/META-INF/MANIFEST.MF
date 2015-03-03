@@ -27,6 +27,4 @@ Bundle-Activator: com.netcetera.trema.eclipse.TremaPlugin
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-Vendor: Netcetera
-Export-Package: com.netcetera.trema.core,
- com.netcetera.trema.core.api,
- com.netcetera.trema.eclipse.validators
+Export-Package: com.netcetera.trema.eclipse.validators
