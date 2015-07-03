@@ -24,6 +24,7 @@
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
       <item name="The File Format" href="fileformat.html"/>
+      <item name="Installation" href="installation.html"/>
       <item name="Usage" href="usage.html"/>
       <item name="FAQ" href="faq.html"/>
     </menu>

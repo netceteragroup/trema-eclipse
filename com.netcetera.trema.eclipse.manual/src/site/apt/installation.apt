@@ -1,0 +1,18 @@
+ ------
+ Installation
+ ------
+ Jacques Stadler
+ ------
+ 2015-07-03
+ ------
+
+Installation Instructions
+
+ <<Update Site>>
+ 
+ The Updatesite for Trema can be found here:
+{{{http://netceteragroup.github.io/trema-eclipse/updatesite}http://netceteragroup.github.io/trema-eclipse/updatesite}}
+ 
+ <<Released Artifacts>>
+ 
+ Released Trema Artifacts can be found in {{{http://search.maven.org/#search%7Cga%7C1%7Ccom.netcetera.trema}Maven Central}}.
