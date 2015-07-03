@@ -46,7 +46,7 @@
         <version>${maven-scm-publish-plugin.version}</version>
         <configuration>
           <scmBranch>gh-pages</scmBranch>
-          <pubScmUrl>scm:git:git@github.com:netceteragroup/trema-eclipse.git</pubScmUrl>
+          <pubScmUrl>scm:git:https://github.com/netceteragroup/trema-eclipse.git</pubScmUrl>
           <content>${project.reporting.outputDirectory}</content>
         </configuration>
         <executions>
