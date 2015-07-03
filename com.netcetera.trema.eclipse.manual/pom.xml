@@ -12,6 +12,15 @@
   <name>Trema Eclipse Manual</name>
   <packaging>pom</packaging>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.netcetera.trema</groupId>
+      <artifactId>com.netcetera.trema.eclipse.p2-repo</artifactId>
+      <version>${project.version}</version>
+      <type>zip</type>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
