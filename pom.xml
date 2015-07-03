@@ -4,7 +4,7 @@
 
   <groupId>com.netcetera.trema</groupId>
   <artifactId>trema-eclipse</artifactId>
-  <version>0.3.1-SNAPSHOT</version>
+  <version>0.3.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Trema Eclipse</name>
   <description>Eclipse Plugin for Trema - Text resource management</description>
