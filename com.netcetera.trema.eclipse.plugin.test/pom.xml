@@ -16,12 +16,6 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.netcetera.trema</groupId>
-      <artifactId>com.netcetera.trema.eclipse.plugin</artifactId>
-      <version>${project.version}</version>
-      <type>eclipse-plugin</type>
-    </dependency>
   </dependencies>
 
 </project>
